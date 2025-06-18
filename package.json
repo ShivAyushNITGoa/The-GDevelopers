@@ -1,0 +1,62 @@
+{
+  "name": "gdevelopers-portal",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "npm@10.9.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "dev:all": "turbo dev",
+    "dev:main": "turbo dev --filter=main",
+    "dev:blog": "turbo dev --filter=blog",
+    "dev:auth": "turbo dev --filter=auth",
+    "dev:docs": "turbo dev --filter=docs",
+    "dev:contact": "turbo dev --filter=contact",
+    "dev:team": "turbo dev --filter=team",
+    "dev:projects": "turbo dev --filter=projects",
+    "build": "turbo build",
+    "build:main": "cd apps/main && npm run build",
+    "start": "turbo start",
+    "lint": "turbo lint",
+    "export": "cd apps/main && npm run build",
+    "cleanup": "node cleanup.js",
+    "dev:enhanced": "node run-enhanced.js",
+    "docs:generate": "npx typedoc --entryPointStrategy packages packages/*/src/index.ts",
+    "setup:new": "npm install && npm run cleanup && npm run build",
+    "setup": "npm install && npm run build",
+    "build:all": "turbo build",
+    "lint:all": "turbo lint"
+  },
+  "dependencies": {
+    "i18next": "^23.0.0",
+    "i18next-browser-languagedetector": "^7.0.0",
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^13.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.5.0",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "autoprefixer": "^10.4.15",
+    "eslint": "^8.47.0",
+    "eslint-config-next": "^14.0.0",
+    "fs-extra": "^11.2.0",
+    "msw": "^2.10.2",
+    "postcss": "^8.4.28",
+    "tailwindcss": "^3.3.3",
+    "ts-jest": "^29.4.0",
+    "turbo": "^1.10.12",
+    "typedoc": "^0.25.11",
+    "typescript": "^5.1.6"
+  }
+}
