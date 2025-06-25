@@ -1,10 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  transpilePackages: ["@gdevelopers/ui"],
   experimental: {
-    serverActions: true,
-    typedRoutes: true,
+    typedRoutes: true
   },
   images: {
     domains: ["images.unsplash.com"],

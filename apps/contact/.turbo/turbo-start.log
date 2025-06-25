@@ -1,0 +1,28 @@
+
+> contact@0.0.0 start
+> next start
+
+ ⨯ Failed to start server
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+    at listenInCluster (node:net:1996:12)
+    at Server.listen (node:net:2101:7)
+    at C:\Users\shiva\Downloads\Tools\The GDevelopers\node_modules\next\dist\server\lib\start-server.js:254:16
+    at new Promise (<anonymous>)
+    at startServer (C:\Users\shiva\Downloads\Tools\The GDevelopers\node_modules\next\dist\server\lib\start-server.js:191:11)
+    at nextStart (C:\Users\shiva\Downloads\Tools\The GDevelopers\node_modules\next\dist\cli\next-start.js:50:40)
+    at C:\Users\shiva\Downloads\Tools\The GDevelopers\node_modules\next\dist\bin\next:157:54
+    at async main (C:\Users\shiva\Downloads\Tools\The GDevelopers\node_modules\next\dist\bin\next:157:5) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+npm error Lifecycle script `start` failed with error:
+npm error code 1
+npm error path C:\Users\shiva\Downloads\Tools\The GDevelopers\apps\contact
+npm error workspace contact@0.0.0
+npm error location C:\Users\shiva\Downloads\Tools\The GDevelopers\apps\contact
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c next start

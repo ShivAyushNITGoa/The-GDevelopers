@@ -1,5 +1,5 @@
 {
-  "name": "gdevelopers-portal",
+  "name": "gdevelopers",
   "version": "1.0.0",
   "private": true,
   "packageManager": "npm@10.9.2",
@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "dev": "turbo dev",
+    "dev:web": "turbo dev --filter=web",
     "dev:all": "turbo dev",
     "dev:main": "turbo dev --filter=main",
     "dev:blog": "turbo dev --filter=blog",
@@ -28,7 +29,8 @@
     "setup:new": "npm install && npm run cleanup && npm run build",
     "setup": "npm install && npm run build",
     "build:all": "turbo build",
-    "lint:all": "turbo lint"
+    "lint:all": "turbo lint",
+    "clean": "turbo clean && rm -rf node_modules"
   },
   "dependencies": {
     "i18next": "^23.0.0",
